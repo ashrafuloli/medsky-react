@@ -1,0 +1,18 @@
+.footer-area {
+  padding: 20px 0;
+}
+
+.copyright {
+  font-size: 16px;
+  font-weight: 500;
+  color: #9094a3;
+
+  a {
+    color: $theme-color;
+    margin-left: 5px;
+
+    &:hover {
+      color: $theme-color-2;
+    }
+  }
+}

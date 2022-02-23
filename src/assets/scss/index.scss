@@ -1,0 +1,12 @@
+// bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// default
+@import "variables";
+@import "mixins";
+@import "default";
+
+// components
+@import "components/header";
+@import "components/footer";
+@import "components/error";
