@@ -4,8 +4,11 @@ import {images} from '../../constants'
 import {Col, Container, Row} from "react-bootstrap";
 import {MdSearch, MdShoppingBasket} from "react-icons/md";
 import navMenu from "../../components/data/navMenu";
+import Cart from "../../components/Cart/Cart";
+import useAppContext from "../../hooks/useAppContext";
 
 const Header = () => {
+    const {cart} = useAppContext().useProduct;
     return (
         <>
             <div className="header-area">
@@ -40,6 +43,7 @@ const Header = () => {
                     </Row>
                 </Container>
             </div>
+            <Cart cart={cart}/>
         </>
     );
 };
