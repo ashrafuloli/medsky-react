@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from "../Layout/Layout";
+import ProductsSection from "../../components/Product/ProductsSection";
 import {Col, Container, Row} from "react-bootstrap";
-import HomeProduct from "../../components/Product/HomeProduct";
 
-const Home = () => {
+const Products = () => {
     return (
         <Layout>
             <div className="product-section section-padding">
@@ -15,14 +15,14 @@ const Home = () => {
                                     Low Priced Medical Supplies
                                 </p>
                                 <h2 className="title">
-                                    The Largest Selections Of Medical Products
+                                    Our Latest Products
                                 </h2>
                             </div>
                         </Col>
                     </Row>
                     <Row>
                         <Col xl={12}>
-                            <HomeProduct/>
+                            <ProductsSection/>
                         </Col>
                     </Row>
                 </Container>
@@ -31,4 +31,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Products;

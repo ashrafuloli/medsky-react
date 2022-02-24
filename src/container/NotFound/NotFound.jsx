@@ -8,7 +8,7 @@ const NotFound = () => {
             <div className="error-content">
                 <h1>404</h1>
                 <p>The webpage you are looking for is not here!</p>
-                <Link to="/" class="error-btn">
+                <Link to="/" className="error-btn">
                     Back To Home
                     <span className="icon"><MdKeyboardReturn/></span>
                 </Link>

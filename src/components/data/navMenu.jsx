@@ -12,11 +12,11 @@ const navMenu = [
         "title": "Service"
     },
     {
-        "link": "/shop",
+        "link": "/products",
         "title": "Shop"
     },
     {
-        "link": "/blog",
+        "link": "/posts",
         "title": "Blog"
     },
     {
