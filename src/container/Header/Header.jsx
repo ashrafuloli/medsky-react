@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import {images} from '../../constants'
 import {Col, Container, Row} from "react-bootstrap";
@@ -9,6 +9,18 @@ import useAppContext from "../../hooks/useAppContext";
 
 const Header = () => {
     const {cart} = useAppContext().useProduct;
+    const [openCart, setOpenCart] = useState(false);
+
+    const handlerOpenCart = () => {
+        setOpenCart(true)
+        console.log(openCart)
+    }
+
+    const handlerCloseCart = () => {
+        setOpenCart(false)
+        console.log(openCart)
+    }
+
     return (
         <>
             <div className="header-area">
@@ -36,14 +48,14 @@ const Header = () => {
                         </Col>
                         <Col xl={3} className="text-end">
                             <div className="attr-menu">
-                                <button><MdShoppingBasket/></button>
+                                <button onClick={handlerOpenCart}><MdShoppingBasket/></button>
                                 <button><MdSearch/></button>
                             </div>
                         </Col>
                     </Row>
                 </Container>
             </div>
-            <Cart cart={cart}/>
+            <Cart cart={cart} handlerCloseCart={handlerCloseCart} cartStatus={openCart}/>
         </>
     );
 };
