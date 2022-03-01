@@ -8,6 +8,8 @@ import Contact from "./container/Contact/Contact";
 import Post from "./container/Post/Post";
 import ProductDetails from "./container/ProductDetails/ProductDetails";
 import AppProvider from "./context/AppProvider";
+import Login from "./container/Login/Login";
+import Register from "./container/Register/Register";
 
 function App() {
     return (
@@ -38,6 +40,12 @@ function App() {
                         </Route>
                         <Route path="/contact">
                             <Contact/>
+                        </Route>
+                        <Route path="/login">
+                            <Login/>
+                        </Route>
+                        <Route path="/register">
+                            <Register/>
                         </Route>
                         <Route path="*">
                             <NotFound/>

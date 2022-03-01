@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import {images} from '../../constants'
 import {Col, Container, Row} from "react-bootstrap";
-import {MdSearch, MdShoppingBasket} from "react-icons/md";
+import {MdSearch, MdShoppingBasket, MdOutlineAccountCircle} from "react-icons/md";
 import navMenu from "../../components/data/navMenu";
 import Cart from "../../components/Cart/Cart";
 import useAppContext from "../../hooks/useAppContext";
@@ -50,6 +50,9 @@ const Header = () => {
                             <div className="attr-menu">
                                 <button onClick={handlerOpenCart}><MdShoppingBasket/></button>
                                 <button><MdSearch/></button>
+                                <button>
+                                    <MdOutlineAccountCircle/> <span>Ashraful Oli</span>
+                                </button>
                             </div>
                         </Col>
                     </Row>
