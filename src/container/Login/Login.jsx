@@ -3,8 +3,11 @@ import {Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {images} from "../../constants";
 import {ImFacebook, ImGithub, ImGoogle} from "react-icons/im";
+import useAppContext from "../../hooks/useAppContext";
 
 const Login = () => {
+    const {signInWithGoogle} = useAppContext().useAuth;
+
     return (
         <div className="login-wrapper">
             <Container>
@@ -44,7 +47,7 @@ const Login = () => {
                             <Row>
                                 <Col xl={4}>
                                     <div className="input-btn google-btn">
-                                        <button><ImGoogle/> Goggle</button>
+                                        <button onClick={signInWithGoogle}><ImGoogle/> Goggle</button>
                                     </div>
                                 </Col>
                                 <Col xl={4}>
